@@ -1,0 +1,70 @@
+basic resume setup with dynamodb integration. no other functionality.
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Changes to be committed:
+#	new file:   .env
+#	modified:   package-lock.json
+#	modified:   package.json
+#	new file:   proxy.config.json
+#	new file:   server/db.js
+#	new file:   server/index.js
+#	new file:   server/routes.js
+#	modified:   src/app/app.component.css
+#	modified:   src/app/app.component.html
+#	modified:   src/app/app.component.ts
+#	modified:   src/app/app.config.ts
+#	new file:   src/app/database.service.spec.ts
+#	new file:   src/app/database.service.ts
+#	new file:   src/app/header/header.component.css
+#	new file:   src/app/header/header.component.html
+#	new file:   src/app/header/header.component.ts
+#	new file:   src/app/header/image/image.component.css
+#	new file:   src/app/header/image/image.component.html
+#	new file:   src/app/header/image/image.component.spec.ts
+#	new file:   src/app/header/image/image.component.ts
+#	new file:   src/app/header/name/name.component.css
+#	new file:   src/app/header/name/name.component.html
+#	new file:   src/app/header/name/name.component.spec.ts
+#	new file:   src/app/header/name/name.component.ts
+#	new file:   src/app/main/main.component.css
+#	new file:   src/app/main/main.component.html
+#	new file:   src/app/main/main.component.spec.ts
+#	new file:   src/app/main/main.component.ts
+#	new file:   src/app/main/profile/profile.component.css
+#	new file:   src/app/main/profile/profile.component.html
+#	new file:   src/app/main/profile/profile.component.spec.ts
+#	new file:   src/app/main/profile/profile.component.ts
+#	new file:   src/app/main/work-experience/job-position/job-position.component.css
+#	new file:   src/app/main/work-experience/job-position/job-position.component.html
+#	new file:   src/app/main/work-experience/job-position/job-position.component.spec.ts
+#	new file:   src/app/main/work-experience/job-position/job-position.component.ts
+#	new file:   src/app/main/work-experience/job-position/job-position.ts
+#	new file:   src/app/main/work-experience/work-experience.component.css
+#	new file:   src/app/main/work-experience/work-experience.component.html
+#	new file:   src/app/main/work-experience/work-experience.component.spec.ts
+#	new file:   src/app/main/work-experience/work-experience.component.ts
+#	new file:   src/app/side/personal-info/personal-info.component.css
+#	new file:   src/app/side/personal-info/personal-info.component.html
+#	new file:   src/app/side/personal-info/personal-info.component.spec.ts
+#	new file:   src/app/side/personal-info/personal-info.component.ts
+#	new file:   src/app/side/side.component.css
+#	new file:   src/app/side/side.component.html
+#	new file:   src/app/side/side.component.spec.ts
+#	new file:   src/app/side/side.component.ts
+#	new file:   src/assets/fonts/Oswald/OFL.txt
+#	new file:   src/assets/fonts/Oswald/Oswald-VariableFont_wght.ttf
+#	new file:   src/assets/fonts/Oswald/README.txt
+#	new file:   src/assets/fonts/Oswald/static/Oswald-Bold.ttf
+#	new file:   src/assets/fonts/Oswald/static/Oswald-ExtraLight.ttf
+#	new file:   src/assets/fonts/Oswald/static/Oswald-Light.ttf
+#	new file:   src/assets/fonts/Oswald/static/Oswald-Medium.ttf
+#	new file:   src/assets/fonts/Oswald/static/Oswald-Regular.ttf
+#	new file:   src/assets/fonts/Oswald/static/Oswald-SemiBold.ttf
+#	new file:   src/assets/images/alexandergoertz.jpg
+#	modified:   src/index.html
+#	modified:   src/styles.css
+#	modified:   tsconfig.json
+#

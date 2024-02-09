@@ -1,0 +1,51 @@
+:host {
+    padding: 5rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: end;
+    height: 100%;
+}
+
+.name {
+    font-size: 6rem;
+    letter-spacing: 0.5rem;
+    line-height: 100%;
+}
+
+.first-name {
+    font-weight: 200;
+}
+
+.last-name {
+    font-weight: 600;
+}
+
+@media (max-width: 1100px) {
+    :host {
+        padding: 2.5rem;
+    }
+
+    .name {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 660px) {
+    :host {
+        padding: 1.5rem;
+    }
+
+    .name {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    :host {
+        padding: 1rem;
+    }
+
+    .name {
+        font-size: 2rem;
+    }
+}

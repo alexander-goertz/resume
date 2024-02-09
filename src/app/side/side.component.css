@@ -1,0 +1,15 @@
+:host {
+    flex-basis: 33.33333%;
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+@media (max-width: 880px) {
+    :host {
+        flex-flow: row-reverse wrap;
+        justify-content: center;
+    }
+}

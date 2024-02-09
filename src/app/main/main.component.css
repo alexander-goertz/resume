@@ -1,0 +1,6 @@
+:host {
+    flex-basis: 66.666666%;
+    display: flex;
+    flex-flow: column nowrap;
+    box-sizing: border-box;
+}

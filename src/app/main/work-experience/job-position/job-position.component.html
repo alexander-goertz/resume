@@ -1,0 +1,5 @@
+<h3>{{ jobPosition.title }}</h3>
+<h4>{{ jobPosition.company }} / {{ jobPosition.location }} / {{ jobPosition.time }}</h4>
+<ul>
+    <li *ngFor="let description of jobPosition.description">{{ description }}</li>
+</ul>

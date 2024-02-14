@@ -16,7 +16,6 @@ const getWorkExperience = async () => {
     }
 
     const workExperience = await ddbClient.scan(params).promise()
-    console.log(workExperience)
     return workExperience
 }
 

@@ -1,7 +1,7 @@
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
-import { getWorkExperience } from "./db.js"
+import { getWorkExperience } from "./db.mjs"
 //necessary to use __dirname in ES6 module
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);

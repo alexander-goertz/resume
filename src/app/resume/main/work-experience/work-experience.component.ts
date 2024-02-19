@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { JobPositionComponent } from './job-position/job-position.component';
-import { DatabaseService } from '../../database.service';
+import { DatabaseService } from '../../../database.service';
 import { JobPosition } from './job-position/job-position';
 import { NgFor } from '@angular/common';
 
@@ -9,16 +9,15 @@ import { NgFor } from '@angular/common';
   standalone: true,
   imports: [JobPositionComponent, NgFor],
   templateUrl: './work-experience.component.html',
-  styleUrl: './work-experience.component.css'
+  styleUrl: './work-experience.component.css',
 })
-
 export class WorkExperienceComponent {
   databaseService: DatabaseService = inject(DatabaseService);
   jobPositions?: JobPosition[];
 
   constructor() {
-    this.databaseService.getWorkExperience().subscribe(data => {
+    this.databaseService.getWorkExperience().subscribe((data) => {
       this.jobPositions = data.reverse();
-    })
+    });
   }
 }

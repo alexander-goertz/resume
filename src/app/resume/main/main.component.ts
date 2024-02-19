@@ -7,8 +7,6 @@ import { WorkExperienceComponent } from './work-experience/work-experience.compo
   standalone: true,
   imports: [ProfileComponent, WorkExperienceComponent],
   templateUrl: './main.component.html',
-  styleUrl: './main.component.css'
+  styleUrl: './main.component.css',
 })
-export class MainComponent {
-
-}
+export class MainComponent {}

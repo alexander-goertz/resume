@@ -1,27 +1,29 @@
-# CloudResume
+# Über dieses Projekt
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
+Dieser CV dient als Übungsprojekt um Erfahrungen in der Entwicklung und vor allem mit verschiedenen AWS Services zu sammeln. Im Folgenden beschreibe ich die verwendeten Services und wie sie zusammenhängen.
 
-## Development server
+Der Webservice besteht aus einem Angular Frontend und einem NodeJS Express Backend. Die Inhalte des Lebenslaufes werden aus einer DynamoDB Datenbank bezogen. Der Sourcecode liegt in einem GitHub Repository.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Der Server wird in einem Docker Container auf mindestens einer AWS EC2 Instance gehostet. Die genaue Anzahl der EC2 Instances wird durch eine Auto Scaling Group verwaltet, die die Instances in bis zu drei Availability Zones verteilt. Der Container wird durch ein Cluster in AWS Elastic Container Service (ECS) verwaltet. Das dazugehörige Docker Image wird in einem privaten Repository im AWS Elastic Container Registry (ECR) gehostet.
 
-## Code scaffolding
+Die gesamte Infrastruktur befindet sich in einer VPC. Die VPC ist durch ein Internet Gateway mit dem Internet verbunden. Der Traffic zum Server wird durch einen Application Load Balancer verteilt. Die Domain alexandergoertz.com ist bei Route53 registriert. Die notwendigen A-Records für die DNS Auflösung zur IP-Adresse des Load Balancers sind ebenfalls in Route53 hinterlegt. Um HTTPS Traffic zu ermöglichen, wurde ein SSL Zertifikat über den AWS Certificate Manager erstellt. Die Authentifizierung für alexandergoertz.com wurde durch Amazon Cognito erstellt und über den Load Balancer integriert.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Via Amazon CodePipeline wurde eine CI/CD Pipeline erstellt. Sobald Änderungen am Sourcecode in den Master Branch im GitHub Repository gepusht werden, wird die Pipeline ausgelöst. Zunächst wird durch Amazon CodeBuild ein neues Docker Image erstellt und in ECR gepusht. Danach bezieht ECS das neue Image aus ECR und deployed es durch ein Rolling Update auf den laufenden EC2 Instances.
 
-## Build
+## Übersicht verwendeter AWS Services:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+DynamoDB
+EC2
+ECS
+ECR
+VPC
+Route53
+ACM
+Cognito
+CodePipeline
+CodeBuild
 
-## Running unit tests
+## Geplante Änderungen
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Front- und Backend in separate Container aufteilen.
+Die gesamte Infrastruktur in Terraform bereitstellen.

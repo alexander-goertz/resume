@@ -1,17 +1,16 @@
-<h3>DynamoDB</h3>
-<h3>ECR</h3>
-<h3>ECS</h3>
-<h3>VPC</h3>
-<h3>Route53</h3>
-<h3>EC2</h3>
-<h3>ACM</h3>
-<h3>Cognito</h3>
-<h3>CodePipeline</h3>
-<h3>CodeBuild</h3>
+<br />
+<h1>Über dieses Projekt</h1>
+<br />
 <p>
-  Dieser CV besteht aus einem Angular Frontend und einem NodeJS Express Backend.
-  Die Inhalte des Lebenslaufes werden aus einer DynamoDB Datenbank bezogen. Der
-  Sourcecode für diesen CV liegt in einem GitHub Repository.
+  Dieser CV dient als Übungsprojekt um Erfahrungen in der Entwicklung und vor
+  allem mit verschiedenen AWS Services zu sammeln und ist derzeit noch Work in
+  Progress. Im Folgenden beschreibe ich die verwendeten Services und wie sie
+  zusammenhängen.
+</p>
+<p>
+  Der Webservice besteht aus einem Angular Frontend und einem NodeJS Express
+  Backend. Die Inhalte des Lebenslaufes werden aus einer DynamoDB Datenbank
+  bezogen. Der Sourcecode liegt in einem GitHub Repository.
 </p>
 <p>
   Der Server wird in einem Docker Container auf mindestens einer AWS EC2
@@ -38,3 +37,27 @@
   Image erstellt und in ECR gepusht. Danach bezieht ECS das neue Image aus ECR
   und deployed es durch ein Rolling Update auf den laufenden EC2 Instances.
 </p>
+<br />
+<div>
+  <span> Übersicht verwendeter AWS Services:</span>
+  <ul>
+    <li>DynamoDB</li>
+    <li>EC2</li>
+    <li>ECS</li>
+    <li>ECR</li>
+    <li>VPC</li>
+    <li>Route53</li>
+    <li>ACM</li>
+    <li>Cognito</li>
+    <li>CodePipeline</li>
+    <li>CodeBuild</li>
+  </ul>
+</div>
+<br />
+<div>
+  <span>Geplante Änderungen:</span>
+  <ul>
+    <li>Front- und Backend in separate Container aufteilen.</li>
+    <li>Die gesamte Infrastruktur in Terraform bereitstellen.</li>
+  </ul>
+</div>

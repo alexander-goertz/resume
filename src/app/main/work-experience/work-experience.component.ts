@@ -17,9 +17,7 @@ export class WorkExperienceComponent {
   jobPositions?: JobPosition[];
 
   constructor() {
-    // calle die funktion aus dem databaseService, die einen request ans backend macht
     this.databaseService.getWorkExperience().subscribe(data => {
-      // kopiere die daten aus der response in den jobPositions Array
       this.jobPositions = data.reverse();
     })
   }

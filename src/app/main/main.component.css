@@ -1,6 +1,13 @@
 :host {
     flex-basis: 66.666666%;
+    max-width: 66.66666%;
     display: flex;
     flex-flow: column nowrap;
     box-sizing: border-box;
+}
+
+@media (max-width: 880px) {
+    :host {
+        max-width: 100%;
+    }
 }

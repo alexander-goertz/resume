@@ -1,5 +1,4 @@
 import AWS from "aws-sdk";
-import "dotenv/config.js";
 
 AWS.config.update({
   region: "eu-central-1",
@@ -7,13 +6,12 @@ AWS.config.update({
 
 const ddbClient = new AWS.DynamoDB.DocumentClient();
 
-const getWorkExperience = async () => {
+const getTable = async (tableName) => {
   const params = {
-    TableName: "work_experience",
+    TableName: tableName,
   };
-
-  const workExperience = await ddbClient.scan(params).promise();
-  return workExperience;
+  const data = await ddbClient.scan(params).promise();
+  return data;
 };
 
-export { getWorkExperience };
+export { getTable };

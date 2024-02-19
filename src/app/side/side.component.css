@@ -1,5 +1,6 @@
 :host {
     flex-basis: 33.33333%;
+    max-width: 33.33333%;
     background-color: black;
     color: white;
     box-sizing: border-box;
@@ -11,5 +12,6 @@
     :host {
         flex-flow: row-reverse wrap;
         justify-content: center;
+        max-width: 100%;
     }
 }

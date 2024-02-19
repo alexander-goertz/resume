@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { JobPosition } from './main/work-experience/job-position/job-position';
+import { PersonalInfo } from './side/personal-info/personal-info';
 
 @Injectable({
   providedIn: 'root'
@@ -8,8 +9,12 @@ import { JobPosition } from './main/work-experience/job-position/job-position';
 export class DatabaseService {
 
   constructor(private http: HttpClient) { }
-  // funktion, die einen http request an /api/work-experience sendet und eine response vom type JobPosition[] wird erwartet. Returnt ein observable
+  // Send HTTP request to provided path. Receive an observable.
   getWorkExperience() {
     return this.http.get<JobPosition[]>("/api/work-experience")
+  }
+
+  getPersonalInfo() {
+    return this.http.get<PersonalInfo[]>("/api/personal-info")
   }
 }

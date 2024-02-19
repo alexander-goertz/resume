@@ -11,6 +11,6 @@ import { NgFor } from '@angular/common';
   styleUrl: './job-position.component.css'
 })
 export class JobPositionComponent {
-  // erwarte input von parent component zum befüllen des templates mit daten
+  // Expect Input from Parent Component to then use in job-position.component.html
   @Input() jobPosition!: JobPosition;
 }

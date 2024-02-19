@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { DatabaseService } from '../../database.service';
+import { PersonalInfo } from './personal-info';
 
 @Component({
   selector: 'app-personal-info',
@@ -8,5 +10,12 @@ import { Component } from '@angular/core';
   styleUrl: './personal-info.component.css'
 })
 export class PersonalInfoComponent {
+  databaseService: DatabaseService = inject(DatabaseService);
+  personalInfo?: PersonalInfo;
 
+  constructor() {
+    this.databaseService.getPersonalInfo().subscribe(data => {
+      this.personalInfo = data[0];
+    })
+  }
 }
